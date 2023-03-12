@@ -10,11 +10,14 @@ class Room:
         self.playlist.append(song)
 
     def add_guest(self, guest):
-        if len(self.guests) < self.capacity:
+        if len(self.guests_list) < self.capacity:
             self.guest_list.append(guest)
     
-    def remove_guests(self, guest):
+    def remove_guest(self, guest):
         self.guest_list.remove(guest)
+
+    def clear_playlist(self):
+        self.playlist.clear()
 
 
 

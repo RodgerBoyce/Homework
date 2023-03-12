@@ -13,6 +13,8 @@ class TestRoom(unittest.TestCase):
         self.guest2 = Guest("steve", "starman", 47.5)
         self.guest3 = Guest("dave", "another one bites the dust", 20)
 
+        self.guest_list = [self.guest1, self.guest2]
+
         self.song1 = Song("another one bites the dust", "queen", 3.35)
         self.song2 = Song("beat it", "michael jackson", 4.19)
         self.song3 = Song("starman", "david bowie", 4.14)
@@ -20,6 +22,23 @@ class TestRoom(unittest.TestCase):
 
 
     # @unittest.skip
+    def test_add_guest(self):
+        self.room.add_guest(self.guest3)
+        self.assertEqual(3, len(self.room.guest_list))
+
+
+    # @unittest.skip
+    def test_can_remove_guest(self):
+        self.room.remove_guest(self.guest1)
+        self.room.remove_guest(self.guest2)
+        self.assertEqual(1, len(self.room.guest_list))
+
+
+    # @unittest.skip
     def test_add_song_to_playlist(self):
+        pass
+
+    # @unittest.skip
+    def test_clear_playlist(self):
         pass
 
