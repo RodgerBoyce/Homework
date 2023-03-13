@@ -1,8 +1,8 @@
 class Room:
 
-    def __init__(self, name, capacity, guest_list, playlist):
+    def __init__(self, name, capacity):
         self.name = name
-        self.capactity = capacity
+        self.capacity = capacity
         self.guest_list = []
         self.playlist = []
 
@@ -10,7 +10,7 @@ class Room:
         self.playlist.append(song)
 
     def add_guest(self, guest):
-        if len(self.guests_list) < self.capacity:
+        if len(self.guest_list) < self.capacity:
             self.guest_list.append(guest)
     
     def remove_guest(self, guest):
