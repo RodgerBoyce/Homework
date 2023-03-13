@@ -1,7 +1,11 @@
+h1 {
+    display: inline-block;
+    }
+
 body {
     text-align: center;
-    background-color: #f1fff9;
-    font-family: sans-serif;
+    background-image: radial-gradient(border-top #71e4b2, #fdffff, #fdffff);
+    font-family: ShopifySans,Helvetica,Arial,sans-serif;
 }
 
 ul {
@@ -21,13 +25,39 @@ ul {
     /* background-color: #054a49; */
     color: white;
     background-image: radial-gradient(circle at -48% 130%,#d0f224aa 24%,#054A49 45%);
+    padding: 5%;
+    font-size:x-large;
 }
 
 #brandimages {
     border-top: 2px solid;
     border-bottom: 2px solid;
+    padding: 2%;
 }
 
-#brandimages > li {
-    /* float: left; */
+ul li {
+    display:inline-block;
+    text-align: center;
+    padding: 1%;
 }
+
+blockquote {
+    padding: 1%;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+blockquote p {
+    padding: 2%;
+    font-size: large;
+    font-style: normal;
+}
+
+p span {
+    display: block;
+  }
+
+/* form {
+    border: 1px solid white;
+    border-radius: 5px;
+} */
