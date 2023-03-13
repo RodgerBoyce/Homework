@@ -18,9 +18,3 @@ class Room:
 
     def clear_playlist(self):
         self.playlist.clear()
-
-
-
-
-
-
