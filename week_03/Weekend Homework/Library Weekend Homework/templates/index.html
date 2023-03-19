@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Bookshop</h1>
+
+  <form action="/library" method="post">
+    <label for="title">TITLE:</label>
+    <input type="text" name="title" id="title" placeholder="Enter title..."/>
+    <label for="author">AUTHOR:</label>
+    <input type="text" name="author" id="author" placeholder="Enter author..."/>
+    <label for="genre">GENRE:</label>
+    <input type="text" name="genre" id="genre" placeholder="Enter genre..."/>
+    
+    <button type="submit">Add Book</button>
+  </form>
+  
+  <h2>Current Books</h2>
+  {% for book in library %}
+    <div>
+      <div class="individual-book">
+      <p><a href="/library/{{ library.index(book) }}"><b>{{ book.title }}, {{ book.author }}, {{ book.genre }}</b></a></p>
+  </div>
+      <form action="/remove-book" method="POST">
+        <input type="hidden" name="title" value="{{ book.title }}">
+        <button type="submit">Remove Book</button>
+      </form>
+    </div>
+  {% endfor %}
+  
+{% endblock %}
+

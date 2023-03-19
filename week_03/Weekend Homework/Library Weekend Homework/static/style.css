@@ -1,0 +1,31 @@
+body {
+  background: linear-gradient(to bottom, #ADD8E6, #FFFFFF);
+  background-image: url("https://i.etsystatic.com/23486410/r/il/abbef0/3690366311/il_fullxfull.3690366311_o1ye.jpg");
+  color: antiquewhite;
+  font-size: large;
+}
+  
+body > form {
+  border: 5px solid antiquewhite;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: antiquewhite;
+  font-size: x-large;
+  padding: 10px;
+}
+
+.individual-book a {
+  color: antiquewhite;
+  font-size: 20px;
+}
+
+.home a {
+  color: antiquewhite;
+}
+
+button {
+  width: 125;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+}
