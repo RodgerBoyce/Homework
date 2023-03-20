@@ -4,5 +4,7 @@ class Book():
         self.title = title
         self.author = author
         self.genre = genre
+        self.checked_out = False
+        
     
 

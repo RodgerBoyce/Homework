@@ -27,4 +27,13 @@ def remove_book():
         if book.title == title:
             library.remove(book) 
     return redirect('/library')
-    print("Book Removed")
+
+@app.route('/check-out-book', methods=['POST'])
+def check_out_book():
+    title = request.form['title']
+    checked_out = 'checked_out' in request.form
+    for book in library:
+        if book.title == title:
+            book.checked_out = checked_out
+            break
+    return redirect('/library')

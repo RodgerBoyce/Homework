@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>Bookshop</h1>
+  <h1>Library </h1>
 
   <form action="/library" method="post">
     <label for="title">TITLE:</label>
@@ -19,7 +19,7 @@
     <div>
       <div class="individual-book">
       <p><a href="/library/{{ library.index(book) }}"><b>{{ book.title }}, {{ book.author }}, {{ book.genre }}</b></a></p>
-  </div>
+      </div>
       <form action="/remove-book" method="POST">
         <input type="hidden" name="title" value="{{ book.title }}">
         <button type="submit">Remove Book</button>

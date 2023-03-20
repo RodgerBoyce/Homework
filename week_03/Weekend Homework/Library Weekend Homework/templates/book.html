@@ -9,12 +9,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>Your Selected Book</title>
+    <title>Your Selected Book </title>
 </head>
 <body>
+    <div class="chosen-book">
     <p><b>{{ book.title }}, {{ book.author }}, {{ book.genre }}</b>
-    </p>        
+    </p>
+    </div>
 </body>
 </html>
-
 {% endblock %}

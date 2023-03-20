@@ -1,10 +1,27 @@
+
 body {
-  background: linear-gradient(to bottom, #ADD8E6, #FFFFFF);
   background-image: url("https://i.etsystatic.com/23486410/r/il/abbef0/3690366311/il_fullxfull.3690366311_o1ye.jpg");
-  color: antiquewhite;
-  font-size: large;
+  background-size: cover;
+  position: relative;
 }
-  
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1; 
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  font-size: large;
+  color: antiquewhite;
+}
+
 body > form {
   border: 5px solid antiquewhite;
   display: flex;
@@ -12,20 +29,53 @@ body > form {
   align-items: center;
   color: antiquewhite;
   font-size: x-large;
-  padding: 10px;
+  padding: 15px;
 }
 
-.individual-book a {
+h1 {
   color: antiquewhite;
-  font-size: 20px;
+  align-content: center;
+}
+
+h2 {
+  color: antiquewhite;
+}
+
+form label {
+  color: antiquewhite;
 }
 
 .home a {
   color: antiquewhite;
+  list-style: none;
+  text-decoration: none;
 }
 
 button {
-  width: 125;
+  width: 130;
   color: rgb(0, 0, 0);
   border-radius: 10px;
+}
+
+/* .individual-book > button {
+  width: 130;
+  color: rgb(255, 0, 0);
+  border-radius: 10px;
+} */
+
+.individual-book a {
+  color: antiquewhite;
+  display: flex;
+  flex-direction: row;
+
+}
+.individual-book:visited a {
+  color: grey;
+}
+
+.chosen-book {
+  display: flex;
+  flex-wrap: wrap;
+  color: rgb(255, 255, 255);
+  font-size: xx-large;
 }
