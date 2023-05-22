@@ -18,3 +18,4 @@ public class Director extends Manager{
         return this.getSalary() * 0.02;
     }
 }
+
